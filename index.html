@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saravanavel E | AI & Data Science Specialist</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00f3ff;
+            --primary-rgb: 0, 243, 255;
+            --secondary: #bc13fe;
+            --bg-body: #050508;
+            --bg-card: #0c0c14;
+            --text-main: #f0f0f0;
+            --text-muted: #d0d0d0;
+            --text-secondary: #aaaaaa;
+            --border: rgba(255, 255, 255, 0.12);
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        [data-theme="light"] {
+            --bg-body: #ffffff;
+            --bg-card: #f8f9fa;
+            --text-main: #111111;
+            --text-muted: #666666;
+            --text-secondary: #777777;
+            --border: rgba(0, 0, 0, 0.1);
+            --primary: #0056b3;
+            --secondary: #6f42c1;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .lexend {
+            font-family: 'Lexend', sans-serif;
+            color: var(--text-main);
+        }
+
+        strong {
+            color: var(--primary);
+        }
+
+        .text-muted {
+            color: var(--text-muted) !important;
+        }
+
+        .small-text {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* --- Navbar --- */
+        .navbar {
+            background: var(--bg-body);
+            border-bottom: 2px solid var(--border);
+            padding: 1rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--text-main) !important;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-muted) !important;
+            transition: 0.3s;
+            padding: 0.5rem 1.2rem !important;
+        }
+
+        .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        /* --- Buttons --- */
+        .btn-outline-secondary {
+            border-color: var(--border) !important;
+            color: var(--text-main) !important;
+            border-width: 2px !important;
+        }
+
+        .btn-outline-secondary:hover {
+            background: var(--primary) !important;
+            border-color: var(--primary) !important;
+            color: #fff !important;
+        }
+
+        /* --- Scroll Progress --- */
+        .progress-bar {
+            height: 4px;
+            background: var(--gradient);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10000;
+            width: 0%;
+            transition: none;
+        }
+
+        /* --- Hero --- */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 80px 0;
+        }
+
+        .hero-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.2);
+        }
+
+        /* --- Global Sections --- */
+        .section-header {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-header i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .section-header h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-custom {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Specific Resume Items --- */
+        .resume-item {
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        .resume-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .date {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .location {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .skill-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-label {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .badge-skill {
+            background: var(--border);
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin: 0.2rem;
+            display: inline-block;
+        }
+
+        /* --- Buttons --- */
+        .btn-theme {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-main);
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient);
+            border: none;
+            color: #000;
+            font-weight: 700;
+            padding: 0.8rem 2rem;
+            border-radius: 12px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary-custom:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+            color: #000;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--border);
+            border-radius: 12px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            background: var(--primary);
+            color: #000;
+        }
+
+        .contact-item i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+
+            .hero-img {
+                width: 240px;
+                height: 240px;
+            }
+
+            .section-header h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="progress-bar" id="scrollProgress"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">SARAVANAVEL <span style="color: var(--primary)">E</span></a>
+            <div class="d-flex align-items-center order-lg-3">
+                <div class="btn-theme" id="themeBtn"><i class="fas fa-moon"></i></div>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars" style="color: var(--text-main)"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competitions">Achievements</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h5 class="fw-bold mb-3" style="color: var(--primary); letter-spacing: 3px;">HELLO, I AM</h5>
+                    <h1 class="display-2 fw-bold mb-2">SARAVANAVEL E</h1>
+                    <h3 class="mb-4" style="color: var(--primary); font-weight: 700;">STUDENT ENTREPRENEUR & AI
+                        SCIENTIST</h3>
+
+                    <p class="fs-5 mb-5" style="opacity: 0.9; max-width: 650px; line-height: 1.8;">
+                        <strong>Founder of ULock AI startup</strong>, <strong>Chairperson in IEEE KCE SB CIS </strong>,
+                        Undergraduate student in Artificial Intelligence and Data Science with strong foundations in
+                        machine learning, data structures, and Python-based development. Experienced in building
+                        AI-driven applications and data pipelines. Passionate about applying AI and data-driven
+                        techniques to solve real-world problems, <strong>published 3 research papers</strong>, and
+                        active <strong>conference technical reviewer</strong>.
+                    </p>
+
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="https://drive.google.com/uc?id=1FlxuWVYnnykDP0kBxQDjPFbyVLzTEvWO&export=download"
+                            class="btn-primary-custom">
+                            <i class="fas fa-file-pdf"></i> RESUME
+                        </a>
+                        <a href="https://github.com/SaravanavelE" target="_blank"
+                            class="btn btn-outline-secondary rounded-4 px-4 py-3 fw-bold">GITHUB</a>
+                        <a href="https://linkedin.com/in/saravanavel-e" target="_blank"
+                            class="btn btn-outline-secondary rounded-4 px-4 py-3 fw-bold">LINKEDIN</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center mt-5 mt-lg-0">
+                    <img src="https://lh3.googleusercontent.com/d/1d2yaet86BLowxAUhzP_qb8fRd9IP3-0O"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Saravanavel+E&size=512&background=0D8ABC&color=fff'"
+                        alt="Saravanavel E" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+
+        <!-- PROFILE SUMMARY -->
+        <section id="summary" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-user-circle"></i>
+                <h2>Profile Summary</h2>
+            </div>
+            <div class="card-custom">
+                <p class="mb-0 fs-5">
+                    Undergraduate student in <strong>Artificial Intelligence and Data Science</strong> with strong
+                    foundations in machine learning, data structures, and Python-based development.
+                    Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and
+                    data-driven techniques to solve real-world problems.
+                </p>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section id="education" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Education</h2>
+            </div>
+            <div class="card-custom">
+                <div class="resume-item">
+                    <span class="date">2023 — 2027</span>
+                    <h4 class="fw-bold">Bachelor of Technology (B.Tech) in AI & DS</h4>
+                    <span class="location">Karpagam College of Engineering, Coimbatore</span>
+                    <div class="badge-skill">CGPA: 8.05 / 10 (upto Vth Semester)</div>
+                </div>
+                <div class="resume-item border-0 pb-0">
+                    <span class="date">2021 — 2023</span>
+                    <h4 class="fw-bold">Higher Secondary Education (PCBM)</h4>
+                    <span class="location">Everest Mariappa Nadar Higher Secondary School, Kovilpatti</span>
+                    <div class="badge-skill">Percentage: 92%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section id="skills" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-laptop-code"></i>
+                <h2>Technical Skills</h2>
+            </div>
+            <div class="card-custom">
+                <div class="row">
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Programming</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">Python</span>
+                            <span class="badge-skill">Java</span>
+                            <span class="badge-skill">C++</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Data & Machine Learning</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">NumPy</span>
+                            <span class="badge-skill">Pandas</span>
+                            <span class="badge-skill">Supervised Learning</span>
+                            <span class="badge-skill">Unsupervised Learning</span>
+                            <span class="badge-skill">Model Evaluation</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Deep Learning & NLP</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">CNNs</span>
+                            <span class="badge-skill">RNNs</span>
+                            <span class="badge-skill">Transformers</span>
+                            <span class="badge-skill">NLP</span>
+                            <span class="badge-skill">YOLO</span>
+                            <span class="badge-skill">CrewAI</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Frameworks & Tools</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">TensorFlow</span>
+                            <span class="badge-skill">PyTorch</span>
+                            <span class="badge-skill">Keras</span>
+                            <span class="badge-skill">FastAPI</span>
+                            <span class="badge-skill">Flask</span>
+                            <span class="badge-skill">Docker</span>
+                            <span class="badge-skill">AWS</span>
+                            <span class="badge-skill">GCP</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Databases & Viz</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">PostgreSQL</span>
+                            <span class="badge-skill">Snowflake</span>
+                            <span class="badge-skill">Tableau</span>
+                            <span class="badge-skill">Power BI</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 skill-group">
+                        <span class="skill-label">Soft Skills</span>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">Leadership</span>
+                            <span class="badge-skill">Problem Solving</span>
+                            <span class="badge-skill">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-project-diagram"></i>
+                <h2>Projects <span class="badge bg-primary ms-2" style="font-size: 0.6rem; vertical-align: middle;">GITHUB LIVE</span></h2>
+            </div>
+            <div class="row" id="github-projects-container">
+                <!-- Data streamed via JS -->
+                <div class="col-12 text-center py-5">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <p class="mt-3 text-muted">Streaming latest projects from GitHub...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERNSHIPS -->
+        <section id="experience" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-briefcase"></i>
+                <h2>Internships</h2>
+            </div>
+            <div class="card-custom">
+                <div class="resume-item">
+                    <span class="date">Jul 2025 — Sep 2025</span>
+                    <h4 class="fw-bold">Artificial Intelligence Intern</h4>
+                    <span class="location">InternPro</span>
+                    <p class="small mb-0">Developed AI agents for weather forecasting using Python and machine learning
+                        models.</p>
+                </div>
+                <div class="resume-item border-0 pb-0">
+                    <span class="date">Sep 2024 — Oct 2024</span>
+                    <h4 class="fw-bold">Data Science Intern</h4>
+                    <span class="location">Techno Hacks Solutions Pvt. Ltd.</span>
+                    <p class="small mb-0">Applied data analysis and ML techniques on real-world datasets; created
+                        interactive dashboards.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HACKATHONS & COMPETITIONS -->
+        <section id="competitions" class="mb-5">
+            <div class="section-header">
+                <i class="fas fa-trophy"></i>
+                <h2>Hackathons & Competitions</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-custom h-100">
+                        <span class="date">Mar 2026</span>
+                        <h4 class="fw-bold">Smartathon 2.0 (Team: Zentrix)</h4>
+                        <p class="text-muted small mb-2">Conducted by L&T and IEEE IAS</p>
+                        <p class="small mb-0"><strong>Top 10 Finalist</strong> — AI-Based Traffic Management System.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-custom h-100">
+                        <span class="date">Feb 2026</span>
+                        <h4 class="fw-bold">TN Impact Hackathon</h4>
+                        <p class="text-muted small mb-2">Conducted by TN Govt.</p>
+                        <p class="small mb-0">Data Analytics Model to Reduce Rejection Rates in Small Industries.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card-custom h-100">
+                        <span class="date">Feb 2026</span>
+                        <h4 class="fw-bold">4th Hack Nation</h4>
+                        <p class="text-muted small mb-2">Conducted by OpenAI, MIT</p>
+                        <p class="small mb-0">Universal Web Agent Project.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <div class="card-custom h-100">
+                        <span class="date">Mar 2025 — Jun 2025</span>
+                        <h4 class="fw-bold">FIFS Gameathon 2.0</h4>
+                        <p class="text-muted small mb-2">Conducted by FIFS</p>
+                        <p class="small mb-0"><strong>13th Place Nationwide</strong> — AI model for Dream11 cricket team
+                            prediction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS & PUBLICATIONS -->
+        <section id="extra" class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="section-header">
+                        <i class="fas fa-certificate"></i>
+                        <h2>Certifications</h2>
+                    </div>
+                    <div class="card-custom">
+                        <ul class="list-unstyled mb-0 small">
+                            <li class="mb-3">
+                                <strong>Oracle Generative AI Professional</strong> — Oracle (OCI) <span
+                                    class="float-end text-muted">Oct 2025</span>
+                            </li>
+                            <li class="mb-3">
+                                <strong>Oracle AI Vector Search Prof.</strong> — Oracle (OCI) <span
+                                    class="float-end text-muted">Oct 2025</span>
+                            </li>
+                            <li class="mb-3">
+                                <strong>AI Agents Intensive</strong> — Google & Kaggle <span
+                                    class="float-end text-muted">Dec 2025</span>
+                            </li>
+                            <li class="mb-0">
+                                <strong>Python for Data Science</strong> — NPTEL (Elite+Silver) <span
+                                    class="float-end text-muted">Dec 2024</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="section-header">
+                        <i class="fas fa-book"></i>
+                        <h2>Publications</h2>
+                    </div>
+                    <div class="card-custom">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-1">Sustainable Smart Agriculture using UAV and IoT</h6>
+                            <p class="text-muted small mb-0">10th Int'l Conference ICCES 2025 | DOI: <a href="https://doi.org/10.1109/ICCES67310.2025.11336861" target="_blank" style="text-decoration: none; color: var(--primary);">10.1109/ICCES67310.2025.11336861</a></p>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Solar Power Forecasting for Smart Grid</h6>
+                            <p class="text-muted small mb-0">4th Int'l Conference ICEARS 2026 | DOI: <a href="https://doi.org/10.1109/ICEARS67481.2026.11416716" target="_blank" style="text-decoration: none; color: var(--primary);">10.1109/ICEARS67481.2026.11416716</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWER & LEADERSHIP -->
+        <section id="leadership" class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="section-header">
+                        <i class="fas fa-tasks"></i>
+                        <h2>Reviewer Experience</h2>
+                    </div>
+                    <div class="card-custom">
+                        <ul class="list-unstyled mb-0 small">
+                            <li class="mb-2"><strong>CCIS 2026</strong> — 4th Int'l Conference on Comp. Intelligence
+                            </li>
+                            <li class="mb-2"><strong>AI-SIIS 2026</strong> — Int'l Conference on AI and Security</li>
+                            <li><strong>GSEACT 2026</strong> — Global Symposium on Emerging Tech</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="section-header">
+                        <i class="fas fa-users"></i>
+                        <h2>Leadership</h2>
+                    </div>
+                    <div class="card-custom">
+                        <div class="resume-item">
+                            <h6 class="fw-bold mb-0">Chairperson</h6>
+                            <p class="small text-muted mb-0">IEEE KCE SB CIS | Aug 2025 — Present</p>
+                        </div>
+                        <div class="resume-item border-0 pb-0">
+                            <h6 class="fw-bold mb-0">Secretary</h6>
+                            <p class="small text-muted mb-0">IEEE KCE SB CIS | Oct 2024 — Jul 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="py-5">
+            <div class="section-header">
+                <i class="fas fa-envelope-open-text"></i>
+                <h2>Contact Me</h2>
+            </div>
+            <div class="card-custom">
+                <div class="contact-grid">
+                    <a href="mailto:mr.saravanavel.e@gmail.com" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://linkedin.com/in/saravanavel-e" target="_blank" class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/SaravanavelE" target="_blank" class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://wa.me/919488722837" target="_blank" class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container text-center py-5 border-top border-secondary">
+        <p class="text-muted small">© 2026 Saravanavel E | Student Entrepreneur | Live Cloud Assets</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll Progress
+        window.onscroll = function () {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            const progress = document.getElementById("scrollProgress");
+            if (progress) progress.style.width = scrolled + "%";
+        };
+
+        // Theme Switch
+        const themeBtn = document.getElementById('themeBtn');
+        const html = document.documentElement;
+        themeBtn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const target = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', target);
+            themeBtn.innerHTML = target === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+
+        // GitHub Project Steamer
+        async function fetchGitHubProjects() {
+            const container = document.getElementById('github-projects-container');
+            const username = 'SaravanavelE';
+            
+            try {
+                // Fetch direct repos, sorted by recent activity
+                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=10`);
+                if (!response.ok) throw new Error('GitHub API Fail');
+                const repos = await response.json();
+                
+                // Clear loader
+                container.innerHTML = '';
+                
+                // Filter: Only show original projects (not forks)
+                const originalRepos = repos.filter(repo => !repo.fork).slice(0, 6);
+                
+                originalRepos.forEach(repo => {
+                    const updatedAt = new Date(repo.pushed_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+                    const langBadge = repo.language ? `<span class="badge-skill">${repo.language}</span>` : '';
+                    
+                    const card = `
+                        <div class="col-md-6 mb-4">
+                            <div class="card-custom h-100">
+                                <span class="date">${updatedAt}</span>
+                                <h4 class="fw-bold">${repo.name} 
+                                    <a href="${repo.html_url}" target="_blank" class="text-muted ms-2"><i class="fab fa-github"></i></a>
+                                </h4>
+                                <div class="mb-2 d-flex flex-wrap">${langBadge}</div>
+                                <p class="small text-muted">${repo.description || 'Professional AI/DS repository exploration.'}</p>
+                                <div class="small-text mt-3">
+                                    <span class="me-3"><i class="fas fa-star text-warning me-1"></i>${repo.stargazers_count}</span>
+                                    <span><i class="fas fa-code-branch text-info me-1"></i>${repo.forks_count}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += card;
+                });
+            } catch (error) {
+                container.innerHTML = `<div class="col-12 text-center text-danger">Failed to stream repositories. <br> <a href="https://github.com/${username}" class="btn btn-sm btn-outline-danger mt-3">View GitHub Directly</a></div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchGitHubProjects);
+    </script>
+</body>
+
+</html>
