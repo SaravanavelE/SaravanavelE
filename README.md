@@ -15,19 +15,10 @@ Here are some ideas to get you started:
 -->
 # Saravanavel E
 
-## Founder of ULock AI | Student Entrepreneur | AI & ML Developer
-
-Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and data-driven techniques to solve real-world problems, published 3 research papers, and active conference technical reviewer.
-
----
+## Founder of ULockAI | Student Entrepreneur | AI & ML Developer
 
 ## 👨‍💻 Profile Summary
-
-- AI & Data Science undergraduate (2023–2027)
-- Strong experience in ML, DL, NLP, and Computer Vision
-- Hands-on with model development, optimization, and deployment
-- Experience with real-time AI systems and AI-powered web applications
-- Active contributor to hackathons, research, and IEEE initiatives
+Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and data-driven techniques to solve real-world problems, published 3 research papers, and active conference technical reviewer.
 
 ---
 
