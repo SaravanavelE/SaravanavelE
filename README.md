@@ -15,10 +15,9 @@ Here are some ideas to get you started:
 -->
 # Saravanavel E
 
-🎓 B.Tech Artificial Intelligence & Data Science  
-🤖 Aspiring AI Engineer | 📊 Machine Learning & Data Science Enthusiast
+## Founder of ULock AI | Student Entrepreneur | AI & ML Developer
 
-I am an aspiring **AI Engineer** with a strong foundation in **Python, Data Science, and Machine Learning**, currently pursuing a **B.Tech in Artificial Intelligence and Data Science** at **Karpagam College of Engineering, Coimbatore**. I am passionate about building intelligent, data-driven systems that solve real-world problems.
+Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and data-driven techniques to solve real-world problems, published 3 research papers, and active conference technical reviewer.
 
 ---
 
