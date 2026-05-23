@@ -26,7 +26,7 @@ Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligenc
 
 **Karpagam College of Engineering, Coimbatore**  
 B.Tech – Artificial Intelligence & Data Science  
-**CGPA:** 8.05 / 10 (up to V Semester)  
+**CGPA:** 8.13 / 10 (up to V Semester)  
 *2023 – 2027*
 
 **Everest Mariappa Nadar Hr. Sec. School, Kovilpatti**  
