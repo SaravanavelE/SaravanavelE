@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 -->
 # Saravanavel E
 
-## Founder of ULockAI | Student Entrepreneur | AI & ML Developer
+## AI/ML Developer | Building AI Security & Evaluation Systems
 
 ## 👨‍💻 Profile Summary
 Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and data-driven techniques to solve real-world problems, published 3 research papers, and active conference technical reviewer.
