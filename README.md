@@ -15,10 +15,10 @@ Here are some ideas to get you started:
 -->
 # Saravanavel E
 
-## AI/ML Developer | Building AI Security & Evaluation Systems
+## AI/ML Developer & Researcher | Building AI Security & Evaluation Systems
 
 ## 👨‍💻 Profile Summary
-Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Passionate about applying AI and data-driven techniques to solve real-world problems, published 3 research papers, and active conference technical reviewer.
+Chairperson in IEEE KCE SB CIS , Undergraduate student in Artificial Intelligence and Data Science with strong foundations in machine learning, data structures, and Python-based development. Experienced in building AI-driven applications and data pipelines. Specializing in AI Safety, LLM Security, and Trustworthy AI, with experience designing AI security frameworks, autonomous evaluation systems, and secure AI agent architectures. Published 3 research papers, and active conference technical reviewer.
 
 ---
 
